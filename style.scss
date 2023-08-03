@@ -13,25 +13,70 @@ img {
 
 body {
   color: #000026;
+  background-color: #f5f4f8;
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 48px;
+  font-weight: bold;
   display: inline-block;
 }
 
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
 header {
+  background-color: white;
   nav {
     div.container-fluid {
+      div#navbarNavDropdown {
+        ul {
+          li {
+            a {
+              font-weight: bold;
+            }
+          }
+        }
+      }
       div#navbarNavDropdown {
         div#bell-img {
           div {
             height: 60px;
             width: 60px;
             &:first-of-type {
-              background-color: #adadad;
+              background-color: #ebebeb;
+              position: relative;
+              &::after {
+                content: "";
+                position: absolute;
+                height: 12px;
+                width: 12px;
+                background-color: blue;
+                border-radius: 50%;
+                top: 10%;
+                right: 15%;
+              }
             }
-            img#bell {
+            &:nth-of-type(2) {
+              position: relative;
+              &::after {
+                content: "";
+                position: absolute;
+                height: 15px;
+                width: 15px;
+                background-color: #00e500;
+                border: 3px solid white;
+                border-radius: 50%;
+                bottom: 0;
+                right: 10%;
+              }
+            }
+            svg#bell {
               height: 35%;
               width: 35%;
             }
@@ -59,6 +104,14 @@ header {
             font-size: 23px;
             max-width: 500px;
             line-height: 1.8;
+            position: relative;
+            &::after {
+              content: "";
+              position: absolute;
+              inset: 0;
+              background-color: #7550fe;
+              opacity: 50%;
+            }
           }
           div {
             button {
@@ -77,15 +130,28 @@ header {
         }
       }
     }
-    &:nth-of-type(2) {
-      background-color: white;
-      div#under-hero {
-        max-width: 1400px;
-        margin-inline: auto;
-        div {
-          img {
-            height: 20px;
-          }
+  }
+}
+
+section {
+  border-bottom: 1px solid #dbdbdb;
+  div#under-hero {
+    background-color: white;
+    min-height: 100px;
+    max-width: 1400px;
+    margin-inline: auto;
+    margin-inline: auto;
+    div {
+      div {
+        &:first-of-type {
+          height: 65px;
+          width: 65px;
+          background-color: #ffeeda;
+          border-radius: 50%;
+        }
+        svg {
+          height: 38%;
+          color: #c08a64;
         }
       }
     }
@@ -93,8 +159,24 @@ header {
 }
 
 main {
-  margin-top: 100px;
   div.max-width {
     max-width: 1400px;
+    margin-inline: auto;
   }
+}
+
+#stars-rec {
+  color: #ff8900;
+}
+
+.price.font-sm {
+  span {
+    &:first-of-type {
+      font-weight: bold;
+    }
+  }
+}
+
+.contenitore {
+  padding-top: 100px;
 }

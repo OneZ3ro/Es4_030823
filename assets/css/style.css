@@ -13,21 +13,62 @@ img {
 
 body {
   color: #000026;
+  background-color: #f5f4f8;
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 48px;
+  font-weight: bold;
   display: inline-block;
 }
 
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+header {
+  background-color: white;
+}
+header nav div.container-fluid div#navbarNavDropdown ul li a {
+  font-weight: bold;
+}
 header nav div.container-fluid div#navbarNavDropdown div#bell-img div {
   height: 60px;
   width: 60px;
 }
 header nav div.container-fluid div#navbarNavDropdown div#bell-img div:first-of-type {
-  background-color: #adadad;
+  background-color: #ebebeb;
+  position: relative;
 }
-header nav div.container-fluid div#navbarNavDropdown div#bell-img div img#bell {
+header nav div.container-fluid div#navbarNavDropdown div#bell-img div:first-of-type::after {
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  background-color: blue;
+  border-radius: 50%;
+  top: 10%;
+  right: 15%;
+}
+header nav div.container-fluid div#navbarNavDropdown div#bell-img div:nth-of-type(2) {
+  position: relative;
+}
+header nav div.container-fluid div#navbarNavDropdown div#bell-img div:nth-of-type(2)::after {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  background-color: #00e500;
+  border: 3px solid white;
+  border-radius: 50%;
+  bottom: 0;
+  right: 10%;
+}
+header nav div.container-fluid div#navbarNavDropdown div#bell-img div svg#bell {
   height: 35%;
   width: 35%;
 }
@@ -52,6 +93,14 @@ header div.max-width:first-of-type div#hero div p {
   font-size: 23px;
   max-width: 500px;
   line-height: 1.8;
+  position: relative;
+}
+header div.max-width:first-of-type div#hero div p::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #7550fe;
+  opacity: 50%;
 }
 header div.max-width:first-of-type div#hero div div button {
   font-size: 19px;
@@ -65,20 +114,41 @@ header div.max-width:first-of-type div#hero div div button:nth-of-type(2) {
   background-color: white;
   color: #000026;
 }
-header div.max-width:nth-of-type(2) {
-  background-color: white;
+
+section {
+  border-bottom: 1px solid #dbdbdb;
 }
-header div.max-width:nth-of-type(2) div#under-hero {
+section div#under-hero {
+  background-color: white;
+  min-height: 100px;
+  max-width: 1400px;
+  margin-inline: auto;
+  margin-inline: auto;
+}
+section div#under-hero div div:first-of-type {
+  height: 65px;
+  width: 65px;
+  background-color: #ffeeda;
+  border-radius: 50%;
+}
+section div#under-hero div div svg {
+  height: 38%;
+  color: #c08a64;
+}
+
+main div.max-width {
   max-width: 1400px;
   margin-inline: auto;
 }
-header div.max-width:nth-of-type(2) div#under-hero div img {
-  height: 20px;
+
+#stars-rec {
+  color: #ff8900;
 }
 
-main {
-  margin-top: 100px;
+.price.font-sm span:first-of-type {
+  font-weight: bold;
 }
-main div.max-width {
-  max-width: 1400px;
+
+.contenitore {
+  padding-top: 100px;
 }/*# sourceMappingURL=style.css.map */
