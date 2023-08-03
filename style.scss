@@ -1,0 +1,38 @@
+body {
+  color: #000026;
+}
+
+header {
+  nav {
+    div.container-fluid {
+      div#navbarSupportedContent {
+        img {
+          height: 40px;
+        }
+
+        #bell {
+          height: 20px;
+        }
+      }
+    }
+  }
+  div#hero {
+    background-color: #7550fe;
+    color: white;
+
+    & > div {
+      & > div {
+        button {
+          font-weight: 600;
+          &:first-of-type {
+            background-color: #1acb98;
+          }
+          &:nth-of-type(2) {
+            background-color: white;
+            color: #000026;
+          }
+        }
+      }
+    }
+  }
+}
